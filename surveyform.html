@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      body {
+  border: 2px solid white;
+  background-image: url(https://i.pinimg.com/474x/55/08/bb/5508bb23d0e820254d5f94c573e4a6ae.jpg);
+  color: white;
+}
+
+.transparent {
+  background-color: rgba(0, 0, 0, 40%);
+  padding: 25px;
+}
+
+h1, p {
+  font-family: Verdana;
+  margin: 25px 0 15px 0;
+  text-align: center;
+}
+
+::placeholder {
+ color:white; 
+ font-family: monospace;
+ font-style: italic;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 35%);
+  font-size: 20;
+  font-family: Cambria;
+  margin: 0 auto;
+  width: 70%;
+  min-width: 600px;
+  max-width: 800px;
+  padding: 10 20;
+}
+
+label {
+  display: block;
+  margin: 20px 0;
+}
+
+input, textarea, select{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 10 auto;
+  border-radius: 8px;
+  background-color: rgba(155, 155, 155, 30%);
+  border: unset;
+  color: white;
+
+}
+
+textarea {
+  height: 100px;
+}
+
+input[id="number"] {
+  display: inline;
+  width: 70%;
+}
+
+input[type="radio"] {
+  width: unset;
+  display: inline;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  display: inline;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+
+input[type="file"] {
+  padding: 10px;
+}
+
+input[type="date"] {
+  font-style: italic;
+}
+
+.checkboxes label {
+  margin: unset;
+}
+
+.inline {
+  display: inline;
+}
+
+select {
+  width: 55%;
+  display: inline;
+}
+
+article section {
+  display: inline-block;
+  text-align: center;
+}
+
+.age {
+  width: 30%;
+}
+
+.sex {
+  width: 25%;
+}
+
+.status {
+  width: 45%;
+}
+
+fieldset {
+  border: unset;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  font-style: italic;
+}
+
+a {
+  color: #cfcfcf;
+}
+
+a:hover {
+  color: white;
+}
+
+input[type="submit"] {
+  width: 80%;
+  height: 50px;
+  background-color: rgb(120, 120, 200);
+  color: white;
+  font-size: 25px;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <div class="transparent">
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Please fill out this form with appropriate information</p>
+    </header>
+    <br>
+
+    <main>
+      <form id="survey-form">
+
+        <fieldset>
+          <h3>Personal Information</h3>
+          <label id="name-label">Name: <input id="name" required type="text" placeholder="Firstname, Middle Initial, Lastname"></label>
+          <label>Address: <input type="text" required placeholder="House No. / Street / Village / Barangay / City / Province / Zip Code"></label>
+
+          <div>
+            <article>
+              <section class="age">
+                <label id="number-label">Age: <input id="number" min="8" max="120" type="number" placeholder="Enter your age"></label>
+              
+              </section><section class="sex">
+                <label class="inline">Sex:</label>
+                <label class="inline"><input type="radio" name="gender" value="F"> M</label>    
+                <label class="inline"><input type="radio" name="gender" value="F"> F</label>
+            
+              </section><section class="status">
+                <label>Civil Status:  
+                  <select id="dropdown">
+                        <option>-select-</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>WIdowed</option>
+                        <option>Divorced</option>
+                        <option>Asexual</option>
+                    </select>
+                </label>
+              </section>
+            </article>
+          </div>
+
+
+          <label>Birthdate: <input id="bday" required type="date"></label>
+          <label>Mobile Number.: <input type="tel" placeholder="09XX-XXX-XXXX"></label>
+          <label id="email-label">Email: <input id="email" required type="email" placeholder="Enter your email address"></label>
+          <label>Citizenship: <input required type="text" placeholder="Enter your ciitizenship"></label>
+            
+        </fieldset>
+        <fieldset>
+          <h3>Hobbies</h3>
+          <div  class="checkboxes">
+          <label><input type="checkbox" value="draw"> Drawing/Painting</label>
+          <label><input type="checkbox" value="garden"> Gardening</label>
+          <label><input type="checkbox" value="watch"> Wacthing</label>
+          <label><input type="checkbox" value="read"> Reading</label>
+          <label><input type="checkbox" value="games"> Gaming</label>
+          <label><input type="checkbox" value="code"> Coding</label>
+          <label><input type="checkbox" value="music"> Music</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h3>Additional Information</h3>
+
+          <label>2x2 Picture<input type="file"></label>
+          <label>Additional Bio<textarea placeholder="I am currently at first-year college..."></textarea></label>
+        </fieldset>
+        
+        <fieldset>
+          <input type="submit">
+        </fieldset> 
+
+      </form>
+    </main>
+
+    <footer>
+      <p>Created by: <a href="https://www.facebook.com/jhorizrodel.aquino/">Jhoriz Rodel F. Aquino</a></p> 
+    </footer>
+    </div>
+  </body>
+</html>
